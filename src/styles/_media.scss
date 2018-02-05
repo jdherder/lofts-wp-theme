@@ -1,0 +1,37 @@
+/* media queries */
+
+$sm: 568px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$max: 1600px;
+
+@mixin mq-min-sm {
+  @media screen and (min-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin mq-min-md {
+  @media screen and (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin mq-min-lg {
+  @media screen and (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin mq-min-xl {
+  @media screen and (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin mq-min-max {
+  @media screen and (min-width: #{$max}) {
+    @content;
+  }
+}

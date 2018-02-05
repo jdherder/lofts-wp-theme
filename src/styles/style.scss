@@ -1,0 +1,18 @@
+// resets
+@import 'normalize';
+
+// web fonts
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+// sass vars / mixins / functions
+@import 'media';
+
+// base / global styles
+@import 'base';
+
+// template parts
+@import 'template-parts/navigation';
+@import 'template-parts/header';
+
+// page customizations
+@import 'pages/splash';
