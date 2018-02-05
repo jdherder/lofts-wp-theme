@@ -26,6 +26,9 @@
 	<!-- <div class="entry-splash-img" style="background-image: url('<?php echo $featured_img_url; ?>');"></div> -->
 	
 	<header id="masthead" class="site-header" style="background-image: url('<?php echo $featured_img_url; ?>');">
+
+		<div class="site-header-filter"></div>
+
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -55,6 +58,7 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

@@ -182,18 +182,24 @@ html, body {
 a {
   color: #444; }
 
-@media screen and (min-width: 768px) {
-  .main-navigation {
-    position: absolute;
-    left: 24px;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    min-width: 200px; } }
+ul {
+  margin: 0;
+  padding: 0 0 0 20px; }
+
+.main-navigation {
+  z-index: 2; }
+  @media screen and (min-width: 768px) {
+    .main-navigation {
+      position: absolute;
+      left: 0;
+      bottom: 24px;
+      min-width: 200px; } }
 
 .main-navigation ul {
   list-style-type: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  display: flex; }
 
 .main-navigation li {
   padding: 0;
@@ -201,8 +207,7 @@ a {
   font-weight: 700; }
   @media screen and (min-width: 768px) {
     .main-navigation li {
-      padding: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5); } }
+      padding: 12px 12px 12px 24px; } }
 
 .site-header {
   color: white;
@@ -232,6 +237,10 @@ a {
   align-items: center; }
   @media screen and (min-width: 768px) {
     .site-branding {
+      top: 0;
+      left: auto;
+      right: 0;
+      transform: none;
       align-items: flex-end; } }
 
 .site-title {
@@ -260,6 +269,14 @@ a {
     max-width: 50%;
     padding: 10px; } }
 
+.site-header-filter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(transparent, transparent 70%, black); }
+
 .site-content {
   display: flex;
   flex-direction: column;
@@ -270,28 +287,40 @@ a {
       flex-direction: row; } }
 
 .content-area {
-  padding: 4%; }
+  padding: 0 24px 24px; }
   @media screen and (min-width: 768px) {
     .content-area {
-      flex-basis: 75%;
-      flex-shrink: 0;
-      padding: 0 24px 24px 24px;
+      padding: 0 24px 24px;
       margin-top: -36px; } }
 
 .widget-area {
-  padding: 4%; }
+  padding: 0 24px 24px; }
   @media screen and (min-width: 768px) {
     .widget-area {
       border-left: 1px solid black;
       flex-basis: 25%;
       flex-shrink: 0;
-      padding: 24px 12px; } }
+      padding: 12px 24px; } }
 
 .entry-title {
-  margin: 0 -24px 0 -24px;
+  margin: 0 -24px;
   padding: 12px 24px;
-  background: linear-gradient(black, rgba(0, 0, 0, 0.75));
+  color: white;
+  background: black;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .entry-title {
+      text-align: left;
+      background: linear-gradient(rgba(0, 0, 0, 0.25), black 50%);
+      margin: 0 -24px 0 -24px; } }
+
+.site-footer {
+  border-top: 1px solid black;
+  padding: 24px;
+  background-color: black;
   color: white; }
+  .site-footer a {
+    color: white; }
 
 .entry-splash-img {
   width: 100%;

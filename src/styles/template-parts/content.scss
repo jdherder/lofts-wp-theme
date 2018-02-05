@@ -10,30 +10,35 @@
 }
 
 .content-area {
-  padding: 4%;
+  padding: 0 $m-std-pd $m-std-pd;
 
   @include mq-min-md {
-    flex-basis: 75%;
-    flex-shrink: 0;
-    padding: 0 24px 24px 24px;
-    margin-top: -36px;
+    padding: 0 $d-std-pd $d-std-pd;
+    margin-top: (-1.5 * $d-std-pd);
   }
 }
 
 .widget-area {
-  padding: 4%;
+  padding: 0 $m-std-pd $m-std-pd;
 
   @include mq-min-md {
     border-left: 1px solid black;
     flex-basis: 25%;
     flex-shrink: 0;
-    padding: 24px 12px;
+    padding: (0.5 * $d-std-pd) $d-std-pd;
   }
 }
 
 .entry-title {
-  margin: 0 -24px 0 -24px;
-  padding: 12px 24px;
-  background: linear-gradient(black, rgba(black, 0.75));
+  margin: 0 (-1 * $m-std-pd);
+  padding: (0.5 * $d-std-pd) $d-std-pd;
   color: white;
+  background: black;
+  text-align: center;
+
+  @include mq-min-md {
+    text-align: left;
+    background: linear-gradient(rgba(black, 0.25), black 50%);
+    margin: 0 (-1 * $d-std-pd) 0 (-1 * $d-std-pd);
+  }
 }
