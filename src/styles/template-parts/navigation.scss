@@ -2,9 +2,8 @@
 
   @include mq-min-md {
     position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translate(0, -50%);
+    left: 24px;
+    top: 0;
     background-color: rgba(#000000, 0.75);
     min-width: 200px;
   }
@@ -15,18 +14,19 @@
 }
 
 // nav li element, contains anchor link
-.menu ul {
+.main-navigation ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.menu li {
+.main-navigation li {
   padding: 0;
   margin: 0;
   font-weight: 700;
 
   @include mq-min-md {
-    padding: 8% 12%;
+    padding: 12px;
+    border-bottom: 1px solid rgba(white, 0.5);
   }
 }

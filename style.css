@@ -175,29 +175,34 @@ th {
   box-sizing: border-box; }
 
 html, body {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 1.5; }
+
+a {
+  color: #444; }
 
 @media screen and (min-width: 768px) {
   .main-navigation {
     position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translate(0, -50%);
+    left: 24px;
+    top: 0;
     background-color: rgba(0, 0, 0, 0.75);
     min-width: 200px; } }
 
-.menu ul {
+.main-navigation ul {
   list-style-type: none;
   padding: 0;
   margin: 0; }
 
-.menu li {
+.main-navigation li {
   padding: 0;
   margin: 0;
   font-weight: 700; }
   @media screen and (min-width: 768px) {
-    .menu li {
-      padding: 8% 12%; } }
+    .main-navigation li {
+      padding: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5); } }
 
 .site-header {
   color: white;
@@ -233,7 +238,8 @@ html, body {
   font-size: 48px;
   font-weight: 700;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
-  margin: 0 0 10px 0; }
+  margin: 0 0 10px 0;
+  line-height: 1; }
   @media screen and (min-width: 768px) {
     .site-title {
       text-align: right; } }
@@ -253,6 +259,39 @@ html, body {
     background-color: rgba(0, 0, 0, 0.75);
     max-width: 50%;
     padding: 10px; } }
+
+.site-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-top: 1px solid black; }
+  @media screen and (min-width: 768px) {
+    .site-content {
+      flex-direction: row; } }
+
+.content-area {
+  padding: 4%; }
+  @media screen and (min-width: 768px) {
+    .content-area {
+      flex-basis: 75%;
+      flex-shrink: 0;
+      padding: 0 24px 24px 24px;
+      margin-top: -36px; } }
+
+.widget-area {
+  padding: 4%; }
+  @media screen and (min-width: 768px) {
+    .widget-area {
+      border-left: 1px solid black;
+      flex-basis: 25%;
+      flex-shrink: 0;
+      padding: 24px 12px; } }
+
+.entry-title {
+  margin: 0 -24px 0 -24px;
+  padding: 12px 24px;
+  background: linear-gradient(black, rgba(0, 0, 0, 0.75));
+  color: white; }
 
 .entry-splash-img {
   width: 100%;

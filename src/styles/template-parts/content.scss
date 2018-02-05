@@ -1,0 +1,39 @@
+.site-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-top: 1px solid black;
+
+  @include mq-min-md {
+    flex-direction: row;
+  }
+}
+
+.content-area {
+  padding: 4%;
+
+  @include mq-min-md {
+    flex-basis: 75%;
+    flex-shrink: 0;
+    padding: 0 24px 24px 24px;
+    margin-top: -36px;
+  }
+}
+
+.widget-area {
+  padding: 4%;
+
+  @include mq-min-md {
+    border-left: 1px solid black;
+    flex-basis: 25%;
+    flex-shrink: 0;
+    padding: 24px 12px;
+  }
+}
+
+.entry-title {
+  margin: 0 -24px 0 -24px;
+  padding: 12px 24px;
+  background: linear-gradient(black, rgba(black, 0.75));
+  color: white;
+}

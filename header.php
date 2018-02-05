@@ -43,7 +43,7 @@
 			endif; ?>
 
 			<?php if (! is_front_page() ) { 
-				the_title( '<h1 class="site-entry-title">', '</h1>' );
+				#the_title( '<h1 class="site-entry-title">', '</h1>' );
 			} ?>
 		</div><!-- .site-branding -->
 
