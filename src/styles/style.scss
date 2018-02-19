@@ -1,10 +1,12 @@
 // resets
 @import 'normalize';
+@import 'bootstrap-grid';
 
 // web fonts
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
 // sass vars / mixins / functions
+@import 'functions';
 @import 'media';
 
 // base / global styles

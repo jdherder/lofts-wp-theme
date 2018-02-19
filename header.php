@@ -23,13 +23,11 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
-	<!-- <div class="entry-splash-img" style="background-image: url('<?php echo $featured_img_url; ?>');"></div> -->
-	
 	<header id="masthead" class="site-header" style="background-image: url('<?php echo $featured_img_url; ?>');">
 
 		<div class="site-header-filter"></div>
 
-		<div class="site-branding">
+		<div class="site-branding container">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) : ?>
@@ -51,14 +49,30 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
+			<!-- <div class="main-navigation__mobile-toggle">Menu</div> -->
+			<!-- <div class="main-navigation__mobile-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div> -->
+
+			<button class="main-navigation__mobile-toggle hamburger hamburger--elastic" type="button">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</button>
+
 			<?php
 				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
+					'theme_location'  => 'menu-1',
+					'menu_id'         => 'primary-menu',
+					'menu_class'		  => 'primary-menu container',
+					'container_class' => 'main-navigation__container'
 				) );
 			?>
 		</nav><!-- #site-navigation -->
 
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content container">
+	<div class="row">

@@ -1,12 +1,12 @@
 .site-header {
-  color: white;
-  overflow: hidden;
-  height: 70vh;
-  min-height: 400px;
-  background-size: cover;
+  background-color: #3b3b3b;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: #3b3b3b;
+  background-size: cover;
+  color: white;
+  height: 60vh;
+  min-height: unit(400);
+  overflow: hidden;
   position: relative;
 }
 
@@ -16,32 +16,15 @@
 }
 
 .site-branding {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  padding: 4%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include mq-min-md {
-    top: 0;
-    left: auto;
-    right: 0;
-    transform: none;
-    align-items: flex-end;
-  }
+  margin: unit(96) auto 0;
 }
 
 .site-title {
-  font-size: 48px;
+  font-size: unit(48);
   font-weight: 700;
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
-  margin: 0 0 10px 0;
   line-height: 1;
+  margin: 0 0 unit(10) 0;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
 
   @include mq-min-md {
     text-align: right;
@@ -49,9 +32,9 @@
 }
 
 .site-description {
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
-  margin: 0;
   font-weight: 700;
+  margin: 0;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
 
   @include mq-min-md {
     text-align: right;
@@ -61,19 +44,19 @@
 .site-entry-title {
 
   @include mq-min-md {
-    display: inline-block;
-    text-align: right;
     background-color: rgba(#000000, 0.75);
+    display: inline-block;
     max-width: 50%;
-    padding: 10px;
+    padding: unit(10);
+    text-align: right;
   }
 }
 
 .site-header-filter {
-  position: absolute;
+  background: linear-gradient(transparent, transparent 70%, black);
+  bottom: 0;
   left: 0;
+  position: absolute;
   right: 0;
   top: 0;
-  bottom: 0;
-  background: linear-gradient(transparent, transparent 70%, black);
 }

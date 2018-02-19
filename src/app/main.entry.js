@@ -1,1 +1,1 @@
-console.log('main entry');
+import './navigation/navigation.component';

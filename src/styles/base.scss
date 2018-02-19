@@ -1,5 +1,7 @@
-$m-std-pd: 24px;
-$d-std-pd: 24px;
+$base-font-size: 16px;
+
+$accent: #6cad6b;
+$neutral: #cec6c0;
 
 * {
   box-sizing: border-box;
@@ -7,12 +9,22 @@ $d-std-pd: 24px;
 
 html, body {
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: $base-font-size;
+  line-height: 1.75;
+}
+
+body {
+  max-width: 1366px;
+  margin: 0 auto 0;
+}
+
+body.scroll-lock {
+  overflow: hidden;
 }
 
 a {
-  color: #444;
+  color: $accent;
+  font-weight: 700;
 }
 
 ul {

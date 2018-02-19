@@ -1,34 +1,130 @@
-.main-navigation {
-  z-index: 2;
+@import 'navigation__hamburger';
 
-  @include mq-min-md {
-    position: absolute;
-    left: 0;
-    bottom: 24px;
-    // background-color: rgba(#000000, 0.75);
-    min-width: 200px;
+.main-navigation {
+  ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
 }
 
-.menu {
+.main-navigation__mobile-toggle {
+  color: white;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 91;
 
-}
-
-// nav li element, contains anchor link
-.main-navigation ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.main-navigation li {
-  padding: 0;
-  margin: 0;
-  font-weight: 700;
+  &.open {
+    color: black;
+  }
 
   @include mq-min-md {
-    padding: $d-std-pd/2 $d-std-pd/2 $d-std-pd/2 $d-std-pd;
-    // border-bottom: 1px solid rgba(white, 0.5);
+    display: none;
+  }
+}
+
+.main-navigation__container {
+  background-color: rgba(black, 0.95);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transform: translateX(100%);
+  transition: opacity 0.25s ease;
+  width: 100%;
+  z-index: 90;
+
+  &.open {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @include mq-min-md {
+    background-color: rgba(black, 0.8);
+    bottom: auto;
+    opacity: 1;
+    position: absolute;
+    transform: translateX(0);
+    transition: none;
+  }
+}
+
+.primary-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 !important;
+
+  @include mq-min-md {
+    flex-direction: row;
+  }
+}
+
+.main-navigation li a {
+  display: block;
+  font-size: unit(32);
+  font-weight: 700;
+  margin: unit(12) 0;
+  padding: 0 0 0 unit(24);
+  position: relative;
+
+  &::before {
+    background-color: $accent;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: unit(12);
+  }
+
+  @include mq-min-md {
+    font-size: unit(16);
+    font-weight: 400;
+    margin: 0;
+    overflow: hidden;
+    padding: unit(12);
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      background-color: $accent;
+      bottom: 0;
+      content: '';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      transform: translateY(100%);
+      transition: transform 0.25s ease;
+      width: 100%;
+    }
+
+    &:hover {
+      &::after {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.main-navigation .current_page_item a {
+  @include mq-min-md {
+    background-color: rgba(white, 0.1);
+
+    &::after {
+      background-color: white;
+      bottom: 0;
+      content: '';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      transform: translateY(0);
+      width: 100%;
+    }
   }
 }
