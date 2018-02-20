@@ -9,16 +9,22 @@
 }
 
 .main-navigation__mobile-toggle {
+  background-color: rgba(black, 0.5);
   color: white;
   cursor: pointer;
   outline: none;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
+  transition: background-color 0.25s ease;
   z-index: 91;
 
-  &.open {
-    color: black;
+  &.is-active {
+    background-color: transparent;
+  }
+
+  .admin-bar & {
+    position: absolute;
   }
 
   @include mq-min-md {
@@ -47,9 +53,13 @@
     background-color: rgba(black, 0.8);
     bottom: auto;
     opacity: 1;
-    position: absolute;
+    position: fixed;
     transform: translateX(0);
     transition: none;
+
+    .admin-bar & {
+      position: absolute;
+    }
   }
 }
 
@@ -58,12 +68,22 @@
   flex-direction: column;
   margin: 0 auto 0 !important;
 
+  .admin-bar & {
+    padding-top: unit(50);
+  }
+
   @include mq-min-md {
     flex-direction: row;
+    margin: 0 auto 0 !important;
+  
+    .admin-bar & {
+      padding-top: 0;
+    }
   }
 }
 
 .main-navigation li a {
+  color: rgba(white, 0.65);
   display: block;
   font-size: unit(32);
   font-weight: 700;
@@ -78,10 +98,11 @@
     left: 0;
     position: absolute;
     top: 0;
-    width: unit(12);
+    width: unit(6);
   }
 
   @include mq-min-md {
+    color: white;
     font-size: unit(16);
     font-weight: 400;
     margin: 0;
@@ -112,7 +133,20 @@
   }
 }
 
+// active state overrides
 .main-navigation .current_page_item a {
+  color: white;
+
+  &::before {
+    background-color: white;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: unit(12);
+  }
+
   @include mq-min-md {
     background-color: rgba(white, 0.1);
 

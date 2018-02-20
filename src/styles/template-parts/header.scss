@@ -16,17 +16,26 @@
 }
 
 .site-branding {
-  margin: unit(96) auto 0;
+  bottom: unit(32);
+  margin: 0 auto 0;
+  position: absolute;
+
+  @include mq-min-md {
+    bottom: auto;
+    margin: unit(96) auto 0;
+    position: static;
+  }
 }
 
 .site-title {
-  font-size: unit(48);
+  font-size: unit(32);
   font-weight: 700;
   line-height: 1;
   margin: 0 0 unit(10) 0;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
 
   @include mq-min-md {
+    font-size: unit(48);
     text-align: right;
   }
 }

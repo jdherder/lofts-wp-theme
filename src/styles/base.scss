@@ -31,3 +31,39 @@ ul {
   margin: 0;
   padding: 0 0 0 20px;
 }
+
+h1 {
+  font-size: unit(32);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+
+  @include mq-min-md {
+    font-size: unit(32);
+    line-height: 1.5;
+  }
+}
+
+h2 {
+  font-size: unit(24);
+  line-height: 1;
+  margin: 0 0 unit(12);
+  padding: 0;
+
+  @include mq-min-md {
+    font-size: unit(24);
+    line-height: 1;
+  }
+}
+
+h3 {
+  font-size: unit(18);
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+
+  @include mq-min-md {
+    font-size: unit(18);
+    line-height: 1;
+  }
+}
