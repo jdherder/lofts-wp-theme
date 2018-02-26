@@ -5,15 +5,15 @@ const options = {
   devtool: 'inline-source-map',
   entry: {
     main: [
-      './src/app/main.entry.js',
+      './app/main.entry.js',
     ],
     style: [
-      './src/styles/style.scss',
+      './styles/style.scss',
     ],
   },
   output: {
     path: process.cwd(),
-    filename: '[name].bundle.js',
+    filename: '../[name].bundle.js',
   },
   module: {
     rules: [
@@ -37,7 +37,7 @@ const options = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: '[name].css',
+      filename: '../[name].css',
     }),
   ],
   stats: {
