@@ -1,0 +1,59 @@
+.lofts-plugin-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lofts-plugin-list__tile {
+  align-items: center;
+  display: inline-flex;
+  height: unit(200);
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+
+  @include mq-min-sm {
+    width: 50%;
+    height: unit(250);
+  }
+
+  @include mq-min-lg {
+    width: 33.33%;
+  }
+
+  @include mq-min-xl {
+    height: unit(300);
+  }
+
+  &:hover {
+    .lofts-plugin-list__img {
+      transform: scale(1.1);
+    }
+
+    .lofts-plugin-list__title {
+      background-color: black;
+    }
+  }
+}
+
+.lofts-plugin-list__img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.lofts-plugin-list__title {
+  color: white;
+  padding: unit(10);
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+  transition: background-color 0.5s ease;
+}
